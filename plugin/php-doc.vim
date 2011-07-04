@@ -75,14 +75,27 @@ let g:pdv_cfg_CommentTail = " */"
 let g:pdv_cfg_CommentSingle = "//"
 
 " Default values
-let g:pdv_cfg_Type = "mixed"
-let g:pdv_cfg_Package = ""
-let g:pdv_cfg_Version = "$id$"
-let g:pdv_cfg_Author = "Tobias Schlitt <toby@php.net>"
-let g:pdv_cfg_Copyright = "1997-2005 The PHP Group"
-let g:pdv_cfg_License = "PHP Version 3.0 {@link http://www.php.net/license/3_0.txt}"
-
-let g:pdv_cfg_ReturnVal = "void"
+if !exists("pdv_cfg_Type")
+    let g:pdv_cfg_Type = "mixed"
+endif
+if !exists("pdv_cfg_Package")
+    let g:pdv_cfg_Package = ""
+endif
+if !exists("pdv_cfg_Version")
+    let g:pdv_cfg_Version = "$id$"
+endif
+if !exists("pdv_cfg_Author")
+    let g:pdv_cfg_Author = "Tobias Schlitt <toby@php.net>"
+endif
+if !exists("pdv_cfg_Copyright")
+    let g:pdv_cfg_Copyright = "1997-2005 The PHP Group"
+endif
+if !exists("pdv_cfg_License")
+    let g:pdv_cfg_License = "PHP Version 3.0 {@link http://www.php.net/license/3_0.txt}"
+endif
+if !exists("pdv_cfg_ReturnVal")
+    let g:pdv_cfg_ReturnVal = "void"
+endif
 
 " Wether to create @uses tags for implementation of interfaces and inheritance
 let g:pdv_cfg_Uses = 1
